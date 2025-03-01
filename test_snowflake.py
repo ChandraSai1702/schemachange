@@ -8,7 +8,7 @@ conn = snowflake.connector.connect(
 
 cur = conn.cursor()
 cur.execute("SELECT CURRENT_USER(), CURRENT_ROLE();")
-print(cur.fetchall())
+print( cur.fetchall() )
 
 cur.close()
 conn.close()
