@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '/**'
+      - 'snowflakescripts/**'
   
   workflow_dispatch:
 
@@ -37,4 +37,4 @@ jobs:
           pip install schemachange
 
           echo "step 2: Running schemachange"
-          schemachange -f $GITHUB_WORKSPACE/ -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
+          schemachange -v -f $GITHUB_WORKSPACE/snowflakescripts -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table

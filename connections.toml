@@ -1,7 +1,0 @@
-[connections.snowflake]
-account = "XRTSYAM-JY92126"
-user = "CHANDRA1702"
-role = "ACCOUNTADMIN"
-warehouse = "COMPUTE_WH"
-database = "SNOWFLAKE_SAMPLE_DATA"
-authenticator = "externalbrowser"
